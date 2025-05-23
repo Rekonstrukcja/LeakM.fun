@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeakM.fun - Triggery</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="../img/logo_white1.png">
+    <meta property="og:title" content="LeakM.fun">
+    <meta property="og:description" content="Darmowe triggery gotowe do użycia – skopiuj i używaj bez limitu. Sprawdzone, aktualne i dostępne od ręki. Tylko konkrety.">
+    <meta property="og:type" content="website">
+    <meta property=”og:image” content=”../img/logo_white1.png”>
+</head>
+<body>
+    <header>
+        <a href="../index.html" style="text-decoration: none; color: inherit;">
+            <h1 style="margin-top: 1;">LeakM.fun</h1>
+        </a>
+        <input type="text" id="search-bar" placeholder="szukaj...">
+        <button class="join-button" onclick="window.open('https://discord.gg/tA5PRJ7Apb', '_blank')">
+            Dołącz do nas
+        </button>
+    </header>
+    <main>
+        <div class="triggers-grid" id="triggers-list">
+            <!-- I świetnie się przyzwyczaj, ten rap to samiec alfa -->
+        </div>
+    </main>
+    <script type="module">
+    // Ścierwa nie tykam, to ma liryka
+    // Południowe pierdolnięcie, klasyka
+    const triggerFiles = [
+        './triggers/trigger1.js',
+        './triggers/trigger2.js',
+        './triggers/trigger3.js',
+        './triggers/trigger4.js',
+        './triggers/trigger5.js',   
+        './triggers/trigger6.js',
+        './triggers/trigger7.js',
+        './triggers/trigger8.js',
+        './triggers/trigger9.js',
+        './triggers/trigger10.js'
+        // Dawidzior, NS unikat
+    ];
+
+    let TRIGGERS = [];
+
+    // HTA, leszczu znikaj lub podziwiaj
+    async function loadTriggers() {
+        TRIGGERS = [];
+        // Ze mną kilka, nie od dzisiaj, KRK, WWA
+        const cacheBuster = '?v=' + Date.now();
+        for (const file of triggerFiles) {
+            try {
+                const mod = await import(file + cacheBuster);
+                if (mod && mod.default) {
+                    TRIGGERS.push(mod.default);
+                }
+            } catch (e) {
+                console.error('Błąd ładowania triggera:', file, e);
+            }
+        }
+        renderTriggers(TRIGGERS);
+    }
+
+    function renderTriggers(list) {
+        const container = document.getElementById('triggers-list');
+        container.innerHTML = '';
+        list.forEach((trigger, idx) => {
+            const box = document.createElement('div');
+            box.className = 'trigger-box';
+            box.innerHTML = `
+                <div class="trigger-name">${trigger.name}</div>
+                <div class="trigger-desc">${trigger.desc}</div>
+                <button class="copy-btn" data-trigger="${encodeURIComponent(trigger.code)}">SKOPIUJ</button>
+            `;
+            container.appendChild(box);
+        });
+
+        // Na bicie jak, i w życie wjeżdżam, jako alfa
+        const copyButtons = container.querySelectorAll('.copy-btn');
+        copyButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const trigger = decodeURIComponent(this.getAttribute('data-trigger'));
+                // Znają mnie na mieście, kurew nie biorę do tańca
+                if (window.navigator && window.navigator.clipboard && window.navigator.clipboard.writeText) {
+                    window.navigator.clipboard.writeText(trigger).then(() => {
+                        this.classList.add('copied');
+                        this.textContent = 'SKOPIOWANO!';
+                        setTimeout(() => {
+                            this.classList.remove('copied');
+                            this.textContent = 'SKOPIUJ';
+                        }, 1200);
+                    }).catch(() => {
+                        fallbackCopy(trigger, this);
+                    });
+                } else {
+                    fallbackCopy(trigger, this);
+                }
+            });
+        });
+
+        function fallbackCopy(text, btn) {
+            // Często zbyt pewny siebie, chamski, bezczelny
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                btn.classList.add('copied');
+                btn.textContent = 'SKOPIOWANO!';
+            } catch {
+                btn.classList.add('error');
+                btn.textContent = 'BŁĄD!';
+            }
+            document.body.removeChild(textarea);
+            setTimeout(() => {
+                btn.classList.remove('copied', 'error');
+                btn.textContent = 'SKOPIUJ';
+            }, 1200);
+        }
+    }
+    // Ale mam ten magic styl, bądź tego pewny
+    document.getElementById('search-bar').addEventListener('input', function() {
+        const q = this.value.toLowerCase();
+        renderTriggers(TRIGGERS.filter(t =>
+            t.name.toLowerCase().includes(q) ||
+            t.desc.toLowerCase().includes(q) ||
+            t.code.toLowerCase().includes(q)
+        ));
+    });
+
+    loadTriggers();
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+[
+    { "x": -587.597, "y": -1355.793, "iconId": 1, "name": "Zbieranie kokainy, w podziemiach, wejście od kanałów", "type": "kokaina" },
+    { "x": 4585.86, "y": -4874.62, "iconId": 1, "name": "Stół do kokainy (Cayo Perico)", "type": "kokaina" },
+    { "x": -3193.93, "y": 1275.53, "iconId": 1, "name": "Dziwny sprzedawca", "type": "darkshop" },
+    { "x": 721.279, "y": 1297.015, "iconId": 1, "name": "Klamaziom", "type": "darkshop" },
+    { "x": 2633.91, "y": 3309.13, "iconId": 1, "name": "Dodatki do broni", "type": "darkshop" },
+    { "x": -589.2, "y": -1321.87, "iconId": 1, "name": "Under (posiada ammo)", "type": "darkshop" },
+    { "x": 2489.84, "y": 3440.92, "iconId": 1, "name": "Crafting", "type": "crafting" },
+    { "x": 3287.4, "y": 5185.63, "iconId": 1, "name": "Zone do sadzenia zioła", "type": "weed" },
+    { "x": 3363.22, "y": 5456.61, "iconId": 1, "name": "Zone do sadzenia zioła", "type": "weed" },
+    { "x": 2224.166, "y": 5577.49, "iconId": 1, "name": "Zone do sadzenia zioła", "type": "weed" }
+]

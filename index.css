@@ -1,0 +1,485 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10vh; /* Ty idziesz do roboty ja piszę te wersy */
+  text-align: left;
+  padding: 1.5rem 2rem; /* Nic nas nie łączy choć Ciebie coś mierzi */
+  background-color: #150f41; /* Możesz to wylać sobie w komenty */
+  margin: 0 auto; /* I tak nie będę tym nigdy dotknięty */
+  color: #ffffff;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Ciągną się za mną życiowe błędy */
+body {
+  overflow: hidden; /* Zawieszone wyroki dragi ruletki */
+  background-color: #140e3e; /* Wąskie mam plecy więc zbieram sprzęty */
+  user-select: none; /* Z nimi się czuję tu bardziej bezpieczny */
+  -webkit-user-drag: none; /* Telefony są unconnecting odkąd poleciał rejestr prepaid */
+}
+
+img {
+  pointer-events: none; /* W robieniu ludziom pod górę można by mówić że całkiem w cipę */
+  -webkit-user-drag: none; /* Ty kiedy mówisz to palisz czy żalisz */
+}
+
+a {
+  pointer-events: auto; /* I co to kurwa tu wnosi do sprawy */
+}
+
+h1 {
+  font-size: 2.5rem; /* Z domu Cię powlekł dzielnicowy */
+  font-weight: 700; /* Gdzie Ty widziałeś te swoje obławy */
+  margin: 0;
+  position: relative;
+  left: 2rem; /* Więc co Ty wiesz o paraliżach */
+  top: 1rem; /* Co Ty wiesz o barykadach */
+}
+
+.join-button {
+  position: absolute;
+  right: 7rem; /* Prawdziwy Polak walczy do końca */
+  top: 1.5rem;
+  padding: 0.8rem 1.5rem; /* Bagar podważał zastęp straży */
+  background-color: #1e155d;
+  color: #ffffff;
+  border: 2px solid #1e155d;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif; /* Bania paruje popcorn bym prażył */
+  font-size: 1.2rem; /* Na czole gdybym go miał ze sobą */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.join-button:hover {
+  background-color: transparent;
+}
+
+.send-info {
+  position: absolute;
+  right: 16rem; /* Ale ten bit nie jest cukinią ding-dong */
+  top: 3.5rem;
+  right: 87rem; /* A baniak patelnią */
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8); /* Poleci to w karną nie w cywilną */
+  cursor: pointer;
+  transition: color 0.3s ease-in-out; /* Z tym że zawias jest ostro nagięty */
+  text-decoration: none; /* I oby papuga w zoologicznym znalazła przestrzeń na manewry */
+}
+
+.send-info:hover {
+  color: rgba(255, 255, 255, 1); /* Zakończyć bez przerwy hajs tylko w plecy ale kurwa bez jebanych klatek */
+}
+
+.squares-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto); /* Tutaj nawet najlepszy driver może wpierdolić się na wypadek */
+  place-content: center;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+  height: 100vh;
+  width: 100%;
+  padding-top: -50rem; /* Ubezpiecz rodzinę od złego */
+}
+
+/* W imię ojca i syna i ducha świętego */
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px; /* Wszystko się może tu złożyć jak Lego */
+  height: 250px; /* Albo kurwa rozjebać jak pedał */
+  background-color: #1e155d;
+  color: #ffffff;
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif; /* W mordę jebany bezczelnie rap sprzedał */
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.square.info {
+  grid-column: 1 / 2; /* Za to więc tutaj siejemy terror */
+  grid-row: 1 / 3; /* Kurwa masz przejebane ta */
+  width: 500px; /* Podaję rękę koleżkom jak mogę */
+  height: 500px; /* Bo sam nieraz tutaj gubiłem drogę */
+  background-image: url('./img/info_2.png'), url('./img/info_1.jpg'); /* A wiesz co jest w tym wszystkim najlepsze */
+  background-size: 50% auto, cover; /* Zobaczysz wtedy kto będzie przy Tobie */
+  background-position: bottom center, center; /* Rap na hardkorze był zasadowiec */
+  background-repeat: no-repeat;
+  color: white; /* Zawsze pierwszy do prawilnej gadki */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Zjeżdżam kurwa na sanki */
+  align-items: flex-start; /* Zgadnij kto do dziś mi leży trzy paczki */
+  padding: 1rem; /* Te wersy jak pnączę flow kwadratowe */
+  font-size: 3rem; /* Bit zapętlony na repeat */
+  font-weight: 500; /* Na forach piszą że nie trafiam w bit */
+  overflow: hidden; /* No widzisz no widzisz no widzisz a widzisz */
+  transform-style: preserve-3d; /* Lecę sobie na pojedynczych i szczerze pierdolę Twoją technikę */
+  transition: background-size 0.4s ease-out; /* Myślę że pierdoli głupoty kiedy Ci mówi że się rozmiar nie liczy */
+}
+
+.square.info:hover {
+  background-size: 62.5% auto, cover; /* Twoje życie Twój wybór tłumacz sobie to tak jak chcesz */
+}
+
+.square.info span {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6); /* Godziny nie minuty flow ale co Ty kurwa o tym wiesz */
+  margin-top: -0.5rem; /* Kolejny sztos biorę od NWS i słychać od razu za co płacę mu cash */
+  text-align: left;
+  opacity: 0; /* Ty zmień producenta to nie 95 tylko 666 */
+  transform: translateY(-20px); /* Zmień dilera NWO tu 1 równa się 07 */
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out; /* Może to jej urok może to Maybelline może kurwa mać sam już nie wiesz */
+}
+
+.square.info:hover span {
+  opacity: 1; /* Get the kurwa London look to na bani wjeżdża jak but łup */
+  transform: translateY(0); /* Wymień sobie zamki w drzwiach kiedy szmatom rozdałeś klucz */
+}
+
+.square.lua {
+  grid-column: 2 / 3; /* Nie pytam czemu nie pytam skąd */
+  grid-row: 1 / 2;
+  width: 220px; /* To samo się skleja rap płynie we krwi */
+  height: 220px; /* Rym za rymem jak stroboskop zapierdala od epilepsji */
+  background-image: url('./img/lua_1.png'); /* Jesteś o krok kiedy podchodzisz do mnie na wyciągnięcie ręki */
+  background-position: center; /* Z tym że nie pierdolniem selfie bo nie o tym te wersje */
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white; /* Poza mym gronem rzadko tankuję bo popelina tu może być w chuj */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Ty się z kolegą spoufalasz z obcymi kiedy wam pęknął litr na dwóch */
+  align-items: flex-start; /* Wszystko wie cierpuch Ty jak borciuch */
+  padding: 1rem; /* Tipa oszczędzisz ale płyniesz na dzwonku */
+  font-size: 1.2rem; /* No kurwa enigma na Twoje nieszczęście kierowca znajomy sprzedaje nam dowcip */
+  font-weight: 500; /* Porzucam furę w centrum jutro odbiorę dziś wracam numberem */
+  overflow: hidden; /* Robiłem paznokieć z Olem Majorem Kaziorem i z Lublina bokserem */
+  transform-style: preserve-3d; /* Trochę się spięłem bo był to trzeci dzień mojej pierwszej doby */
+  position: relative; /* Szczecin nigdy nie leżał nad morzem a była to noc długich węgorzy */
+}
+
+.square.lua::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./img/lua_2.png');
+  background-size: 50% auto;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  transition: transform 0.4s ease-out; /* Życie życie jest nowelą której nigdy nie masz dosyć */
+  transform-origin: bottom center; /* Wczoraj biały biały welon jutro białe białe nosy */
+  z-index: -1; /* Otwieram oczy telefon mryga sprawdzam nieodebrane połączenia */
+}
+
+.square.lua:hover::before {
+  transform: scale(1.25); /* Skarbie you are so special jednak przegrywasz z trybem wyciszenia */
+}
+
+/* I tak związku nie szukam tylko party hard and dirty dancing */
+.square.lua span {
+  font-size: 1.1rem; /* Pany z selekcji robią zwrot do taksówki warszawskie kluby są expensive */
+  font-weight: 100; /* 2017 mistrzowie stylizacji kurwa te rapy jak szkodnik */
+  color: rgba(255, 255, 255, 0.6); /* Czuję N O C w powietrzu jak szósty zmysł jak patoprzewodnik */
+  margin-top: 0rem; /* Brudny chodnik postawią mi pomnik na koncie komornik blokuje przelew */
+  text-align: left; /* To się chyba kurwa nigdy nie skończy w bankach już nawet nie pytam o debet */
+  opacity: 0; /* Vixa forever HardkorKrokodajl Mortal Kombat Brutality */
+  transform: translateY(-20px); /* Fatality wersy jak nity polecą szyby będziesz pobity */
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out; /* Cipy cipy cipy tu nie ma dziewic odpalam Tinder */
+  font-family: 'Poppins', sans-serif; /* Mentos the freshmaker tej zimnej nocy znajdę ciepłą pizdę */
+}
+
+.square.lua:hover span {
+  opacity: 1; /* Jak zawsze ambitnie Warsaw miasto skrajności jebanych kontrastów */
+  transform: translateY(0); /* W niebezpieczeństwie w labiryncie lej na drugą nogę w jebanym potrzasku */
+}
+
+.square.konta {
+  grid-column: 2 / 3; /* W nałogu w treningu wszystko jest zmienne który to raz już się podnosisz */
+  grid-row: 2 / 3;
+  width: 220px; /* Nic Ci tu nie da krem pod oczy z daleka widzę Twe ptasie oczy */
+  height: 220px; /* Mówię Ci mordo kurwa źle skończysz umoczysz się tym pogrążysz */
+  background-image: url('./img/konta_1.png'); /* Hasło jest błędne Twój ziomek na skręcie zrywam to łącze */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.square.konta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./img/konta_2.png');
+  background-size: 50% auto;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  transition: transform 0.4s ease-out;
+  transform-origin: bottom center;
+  z-index: -1;
+}
+
+.square.konta:hover::before {
+  transform: scale(1.25);
+}
+
+.square.konta span {
+  font-size: 1.1rem;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0rem;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  font-family: 'Poppins', sans-serif;
+}
+
+.square.konta:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.square.cheaty {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  width: 220px;
+  height: 220px;
+  background-image: url('./img/cheaty_1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.square.cheaty::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./img/cheaty_2.png');
+  background-size: 50% auto;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  transition: transform 0.4s ease-out;
+  transform-origin: bottom center;
+  z-index: -1;
+}
+
+.square.cheaty:hover::before {
+  transform: scale(1.25);
+}
+
+.square.cheaty span {
+  font-size: 1.1rem;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0rem;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  font-family: 'Poppins', sans-serif;
+}
+
+.square.cheaty:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.square.poradniki {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  width: 220px;
+  height: 220px;
+  background-image: url('./img/poradniki_2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.square.poradniki::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./img/poradniki_1.png');
+  background-size: 50% auto;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  transition: transform 0.4s ease-out;
+  transform-origin: bottom center;
+  z-index: -1;
+}
+
+.square.poradniki:hover::before {
+  transform: scale(1.25);
+}
+
+.square.poradniki span {
+  font-size: 1.1rem;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0rem;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  font-family: 'Poppins', sans-serif;
+}
+
+.square.poradniki:hover span {
+  opacity: 1;
+  transform: translateY(0); /* od D do D do L */
+}
+
+@media (max-width: 600px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  body {
+    overflow: auto;
+  }
+
+  h1 {
+    position: static;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    flex: 1;
+    text-align: center;
+    order: 2;
+  }
+
+  .join-button {
+    position: static;
+    right: 0;
+    top: 0;
+    margin-left: 0.5rem;
+    margin-right: 2.8rem; /* Zwiększono odstęp od prawej krawędzi */
+    font-size: 0.85rem;
+    padding: 0.4rem 0.7rem;
+    order: 3;
+  }
+
+  .send-info {
+    position: static;
+    right: 0;
+    top: 0;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    order: 1;
+    /* Układ: send-info | h1 | join-button */
+  }
+
+  .squares-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    height: auto;
+    width: 100vw;
+    padding-top: 70px;
+  }
+
+  .square,
+  .square.info,
+  .square.lua,
+  .square.konta,
+  .square.cheaty,
+  .square.poradniki {
+    width: 80vw !important;
+    max-width: 320px;
+    height: 80vw !important;
+    max-height: 320px;
+    min-height: 80vw !important;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    padding: 0.7rem 0.7rem 0.5rem 0.7rem;
+    margin: 0;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-size: cover !important;
+    background-position: center !important;
+    text-align: left;
+  }
+
+  .square.info {
+    background-size: cover, cover !important;
+    font-size: 2rem;
+    height: 80vw !important;
+    width: 80vw !important;
+    min-height: 80vw !important;
+    max-height: 320px;
+    padding-top: 0.7rem;
+    padding-left: 0.7rem;
+  }
+
+  .square.info span,
+  .square.lua span,
+  .square.konta span,
+  .square.cheaty span,
+  .square.poradniki span {
+    font-size: 1rem;
+    margin-top: 0.2rem;
+  }
+}

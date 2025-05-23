@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wyślij info</title>
+    <link rel="stylesheet" href="SendInfo.css">
+    <link rel="icon" type="image/png" href="img/logo_white1.png">
+    <meta property="og:title" content="LeakM.fun - Wyślij info">
+    <meta property="og:description" content="Masz info warte wrzuty? Prześlij je tutaj, Razem budujemy najbardziej aktualną bazę na scenie.">
+    <meta property="og:type" content="website">
+    <meta property=”og:image” content=”img/logo_white1.png”>
+</head>
+<body>
+    <div class="send-info-container">
+        <h1>Wyślij info</h1>
+        <div class="instructions">
+            <h2>Instrukcja</h2>
+            <p>1. Wpisz jak najwięcej informacji w polu tekstowym.</p>
+            <p>Wrzuć 5 najbardziej pomocnych zdjęć dotyczących lokalizacji (tylko PNG i JPG).</p>
+            <p>3. Kliknij przycisk "Wyślij".</p>
+            <p>4. Aby wysłać więcej info, odśwież stronę.</p>
+        </div>
+        <form id="send-info-form">
+            <textarea id="message" placeholder="Enter your message"></textarea>
+            <input id="images" type="file" accept="image/png, image/jpeg" multiple>
+            <button type="button" onclick="handleSubmit()">Wyślij</button>
+        </form>
+        <div class="image-preview-container">
+            <h2>Podgląd zdjęć</h2>
+            <div id="image-preview" class="image-preview"></div>
+        </div>
+        <p id="status" class="status"></p>
+    </div>
+
+    <script>
+        async function handleSubmit() {
+            const message = document.getElementById('message').value;
+            const images = document.getElementById('images').files;
+            const status = document.getElementById('status');
+
+            status.textContent = '';
+
+            if (!message) {
+                status.textContent = 'Wpisz wiadomość.';
+                return;
+            }
+
+            if (images.length === 0) {
+                status.textContent = 'Prosimy o załączenie przynajmniej jednego zdjęcia.';
+                return;
+            }
+
+            if (images.length > 5) {
+                status.textContent = 'Można wysłać maksymalnie 5 zdjęć.';
+                return;
+            }
+
+            const allowedTypes = ['image/png', 'image/jpeg'];
+            for (const image of images) {
+                if (!allowedTypes.includes(image.type)) {
+                    status.textContent = 'Dozwolone są jedynie pliki PNG i JPG.';
+                    return;
+                }
+            }
+
+            const formData = new FormData();
+            Array.from(images).forEach((image, index) => {
+                formData.append(`file${index}`, image);
+            });
+            formData.append('payload_json', JSON.stringify({
+                embeds: [
+                    {
+                        title: 'WIADOMOŚĆ:',
+                        description: message,
+                        images: Array.from(images).map((_, index) => ({
+                            url: `attachment://file${index}`,
+                        })),
+                        footer: {
+                            text: `${new Date().toLocaleString()}`,
+                        },
+                    },
+                ],
+            }));
+
+            try {
+                const response = await fetch('https://ptb.discord.com/api/webhooks/1372008407778988143/_pu3eC6JPbNivgqpgutsnONqEsQWAVGOgPDuzlFXGowDzxQ5IjcwQ3m98yW5A1wqhz9m', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                if (response.ok) {
+                    status.textContent = 'Wiadomość została wysłana! Dziękujemy za pomoc w rozwijaniu strony.';
+                    document.getElementById('message').value = '';
+                    document.getElementById('images').value = '';
+                } else {
+                    status.textContent = 'Nie udało się wysłać wiadomości. Spróbuj ponownie.';
+                }
+            } catch {
+                status.textContent = 'Wystąpił błąd. Spróbuj ponownie.';
+            }
+        }
+
+        const imageInput = document.getElementById('images');
+        const imagePreview = document.getElementById('image-preview');
+
+        imageInput.addEventListener('change', () => {
+            imagePreview.innerHTML = '';
+            const files = Array.from(imageInput.files);
+
+            files.forEach((file) => {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.alt = file.name;
+                    img.classList.add('preview-image');
+                    imagePreview.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            });
+        });
+    </script>
+</body>
+</html>

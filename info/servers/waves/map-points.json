@@ -1,0 +1,9 @@
+[
+    { "x": 2890.28, "y": 4502.3588, "iconId": 1, "name": "DarkShop", "type": "darkshop" },
+    { "x": -1282.133, "y": 313.8354, "iconId": 1, "name": "Branie zlecenia", "type": "houserob" },
+    { "x": -1082.45, "y": -1631.114, "iconId": 1, "name": "WeedShop", "type": "drugshop" },
+    { "x": 1245.4946, "y": -2576.879, "iconId": 1, "name": "MethShop", "type": "drugshop" },
+    { "x": -316.31271, "y": -2782.00, "iconId": 1, "name": "CokeShop", "type": "drugshop" },
+    { "x": 1245.52270, "y": 1875.3881, "iconId": 1, "name": "Tracker", "type": "tracker" },
+    { "x": 791.54260, "y": 2176.4433, "iconId": 1, "name": "Branie zlecenia", "type": "van" }
+]

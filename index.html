@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeakM.fun</title>
+    <link rel="icon" type="image/png" href="img/logo_white1.png">
+    <link rel="stylesheet" href="index.css">
+    <meta property="og:title" content="LeakM.fun">
+    <meta property="og:description" content="Sprawdź najnowsze miejscówki na serwerze, darkshopy, rankingi cheatów, triggery oraz poradniki dla graczy. Wszystko w jednym miejscu – bądź o krok przed innymi!">
+    <meta property="og:type" content="website">
+    <meta property=”og:image” content=”img/logo_white1.png”>
+</head>
+<body>
+    <header>
+        <h1>LeakM.fun</h1>
+        <a href="send-info.html" class="send-info">Wyślij info</a>
+        <button class="join-button" onclick="window.open('https://discord.gg/tA5PRJ7Apb', '_blank')">
+            Dołącz do nas
+        </button>
+    </header>
+    <div class="squares-container">
+        <div class="square info" onclick="window.location.href = 'info/info.html'">
+            INFO
+            <span>Informacje o serwerach</span>
+        </div>
+        <div class="square lua" onclick="window.location.href = 'triggers/index.html'">
+            LUA
+            <span>Triggery</span>
+        </div>
+        <div class="square konta" onclick="window.location.href = 'konta/index.html'">
+            KONTA
+            <span>Informacje o kontach</span>
+        </div>
+        <div class="square cheaty" onclick="window.location.href = 'cheaty/index.html'">
+            CHEATY
+            <span>Gdzie kupić, ranking</span>
+        </div>
+        <div class="square poradniki" onclick="window.location.href = 'poradniki/index.html'">
+            PORADNIKI
+            <span>Porady i wskazówki</span>
+        </div>
+    </div>
+    <script>
+        // Krzyż, mistrzowski logotyp, daj mi pomysł na biznes
+        document.addEventListener('contextmenu', event => event.preventDefault()); // Lepszy od tego, ta, kto wymyślił religie
+        document.addEventListener('selectstart', event => event.preventDefault()); // Zgiń za ojczyznę dla dobra ogółu
+        document.addEventListener('dragstart', event => event.preventDefault()); // Ku waszej pamięci rządy połączą w bólu
+    </script>
+</body>
+</html>

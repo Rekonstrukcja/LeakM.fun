@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeakM.fun - Poradniki</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="../img/logo_white1.png">
+    <meta property="og:title" content="LeakM.fun">
+    <meta property="og:description" content="Poradniki krok po kroku. Ułatw sobie grę i ogarnij temat szybciej niż inni.">
+    <meta property="og:type" content="website">
+    <meta property=”og:image” content=”../img/logo_white1.png”>
+</head>
+<body>
+    <header class="guide-header">
+        <a href="../index.html" style="text-decoration: none; color: inherit;">
+            <h1 style="margin-top: 1;">LeakM.fun</h1>
+        </a>
+        <button class="guide-join-btn" onclick="window.open('https://discord.gg/tA5PRJ7Apb', '_blank')">
+            Dołącz do nas
+        </button>
+        <div class="guide-search-row">
+            <input type="text" class="guide-search" id="searchInput" placeholder="szukaj...">
+        </div>
+    </header>
+    <main>
+        <div class="guide-list" id="guideList">
+            <div class="guide-item" onclick="window.location.href = 'list/1/index.html'">
+                <div class="guide-title">Jak się spoofować?</div>
+                <div class="guide-desc">Poradnik w którym krok po kroku jak się spoofnąć w fivem.</div>
+            </div>
+            <div class="guide-item" onclick="window.location.href = 'list/2/index.html'">
+                <div class="guide-title">Jak przeszukiwać dumpa?</div>
+                <div class="guide-desc">Wytłumaczone jak przeszukiwać najbardziej efektywnie dumpa.</div>
+            </div>
+            <div class="guide-item" onclick="window.location.href = 'list/3/index.html'">
+                <div class="guide-title">Aktywacja Windows'a</div>
+                <div class="guide-desc">Komendy do aktywacji windowsa.</div>
+            </div>
+            <div class="guide-item" onclick="window.location.href = 'list/4/index.html'">
+                <div class="guide-title">Jak zdać wl na DivideRP</div>
+                <div class="guide-desc">Co pytają na wl'ce i co warto wiedzieć</div>
+            </div>
+            <div class="guide-item" onclick="window.location.href = 'list/5/index.html'">
+                <div class="guide-title">Podania na organizacje</div>
+                <div class="guide-desc">Podania których możesz użyć do założenia organizacji na serwerze.</div>
+            </div>
+            <div class="guide-item" onclick="window.location.href = 'list/6/index.html'">
+                <div class="guide-title">Skrypt na t3_lockpick</div>
+                <div class="guide-desc">Skrypt który ułatwia otwieranie zamków na serwerach takich jak V-LIFE czy Divide.</div>
+            </div>
+        </div>
+    </main>
+    <script>
+        // I świetnie się przyzwyczaj, ten rap to samiec alfa
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const val = this.value.toLowerCase();
+            document.querySelectorAll('.guide-item').forEach(item => {
+                const title = item.querySelector('.guide-title').textContent.toLowerCase();
+                const desc = item.querySelector('.guide-desc').textContent.toLowerCase();
+                item.style.display = (title.includes(val) || desc.includes(val)) ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

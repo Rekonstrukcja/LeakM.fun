@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeakM.fun</title>
+    <link rel="stylesheet" href="../poradniki.css">
+    <link rel="icon" type="image/png" href="../../../img/logo_white1.png">
+    <meta property="og:title" content="LeakM.fun">
+    <meta property="og:description" content="Poradnik jak przeszukiwać dumpa.">
+    <meta property="og:type" content="website">
+    <meta property=”og:image” content=”img/logo_white1.png”>
+</head>
+<body>
+    <header class="header">
+        <a href="../../index.html" style="text-decoration: none; color: inherit;">
+            <h1 style="margin-top: 1;">LeakM.fun</h1>
+        </a>
+        <button class="discord" onclick="window.open('https://discord.gg/tA5PRJ7Apb', '_blank')">
+            Dołącz do nas
+        </button>
+    </header>
+    <main>
+        <div class="container">
+            <div class="opis">
+                 1. Otwieracie Visual studio code, następnie klikacie "Open Folder" i wybieracie folder tam gdzie macie dumpa.
+2. Przechodzicie do lupy i szukacie w niej słów związanych z tym czego szukacie.
+3. Po znalezieniu tego szukacie powinniście mieć "vec4(kordy)" lub "coords = (kordy)".
+4. Kopiujecie te kordy i odpalacie GTA XYZ (strona) lub Code Walker (program).
+5. Jeżeli odpaliliście GTA XYZ to na tej stronie wpisujecie 2 pierwsze koordynaty (X i Y), następnie pokaże wam się punkt na mapie w którym owe miejsce jest.
+6. Jeżeli odpaliliście Code Walker (służy do bardziej precyzyjnego sprawdzania koordynatów)
+7. W Code Walker, klikacie << a następnie przechodzicie do Markers. Poddajecie pełne koordynaty (x, y, z).
+8. Zaznaczacie Show marker, następnie klikacie GO TO i przenosi was do miejsca.
+
+
+ALTERNATYWNA OPCJA:
+Pracuje nad programem który sam szuka najistotniejszych rzeczy i wypisuje a ty sprawdzasz w visual studio code ich poprawność.
+            </div>
+            <div class="linki">
+                <ul>
+                    <li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a></li>
+                    <li><a href="https://pl.gta5-mods.com/tools/codewalker-gtav-interactive-3d-map" target="_blank" rel="noopener">Code Walker</a></li>
+                    <li><a href="https://gtamap.xyz/" target="_blank" rel="noopener">GTA XYZ</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

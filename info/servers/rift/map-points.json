@@ -1,0 +1,20 @@
+[
+    { "x": 508.55, "y":  -1822.47, "iconId": 1, "name": "Weed Stół", "type": "weed" },
+    { "x": 2580.7, "y":  1763.4, "iconId": 1, "name": "Zbieranie", "type": "meta" },
+    { "x": 1032.14, "y":  -1596.05, "iconId": 1, "name": "Pakowanie", "type": "meta" },
+    { "x": 1052.14, "y":  -1596.05, "iconId": 1, "name": "Gotowanie", "type": "meta" },
+    { "x": 1024.70, "y":  -1586.41, "iconId": 1, "name": "Przetwarzanie", "type": "meta" },
+    { "x": 2640.8, "y":  4699.9, "iconId": 1, "name": "Zbieranie", "type": "heroina" },
+    { "x": 2769.7, "y":  4868.4, "iconId": 1, "name": "Szukanie chemikaliów", "type": "heroina" },
+    { "x": 1210.0, "y":  -3119.82, "iconId": 1, "name": "Opium Table", "type": "heroina" },
+    { "x": 2939.31, "y":  4624.28, "iconId": 1, "name": "Heroin Table", "type": "heroina" },
+    { "x": 749.2, "y":  4184.4, "iconId": 1, "name": "Wejscie do laboratorium koki", "type": "kokaina" },
+    { "x": -315.78, "y":  3786.53, "iconId": 1, "name": "Zbieranie liści koki", "type": "kokaina" },
+    { "x": 1010.185, "y":  -3194.1, "iconId": 1, "name": "Zbieranie kwasu", "type": "kokaina" },
+    { "x": 1004.43, "y":  -3197.2, "iconId": 1, "name": "Kruszenie Vicodin", "type": "kokaina" },
+    { "x": 1005.85, "y":  -3200.94, "iconId": 1, "name": "Mixer", "type": "kokaina" },
+    { "x": 1942.82, "y":  5177.28, "iconId": 1, "name": "Włączanie grzejnika", "type": "kokaina" },
+    { "x": 1006.05, "y":  -3194.2, "iconId": 1, "name": "Zbieranie koki", "type": "kokaina" },
+    { "x": 145.49, "y":  -240.95, "iconId": 1, "name": "Pralnia", "type": "pranie" },
+    { "x": 415.0678, "y": -217.1957, "iconId": 1, "name": "DarkShop", "type": "darkshop" }
+]

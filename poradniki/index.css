@@ -1,0 +1,168 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #140e3e;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    user-select: none; /* Raz na górze, raz na dole, w samo sedno dopierdolę */
+    -webkit-user-drag: none; /* Spod prysznica wypierdala naga, jak kury w rosole */
+}
+.guide-header {
+    text-align: center;
+    padding: 1rem;
+    background-color: #150f41;
+}
+.guide-logo-link {
+    text-decoration: none;
+    color: inherit;
+    margin: 0 auto;
+    display: block;
+}
+.guide-logo {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.guide-join-btn {
+  position: absolute;
+  right: 7rem;
+  top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #1e155d;
+  color: #ffffff;
+  border: 2px solid #1e155d;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+.guide-join-btn:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #1e155d;
+}
+.guide-search-row {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 24px 0;
+}
+.guide-search {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 0.5rem;
+    border: 2px solid #140E32;
+    background-color: #140E28;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out; /* WWA, ja pierdolę, dobre drewno było w lesie */
+}
+.guide-search:focus {
+    outline: none; /* Max Factory na tapecie, L'Oréale na powiece */
+    border-color: #251c64; /* Pudrowane w toalecie było, widzę po źrenicach */
+    box-shadow: 0 0 10px rgba(37, 28, 100, 1); /* Więc mniemam, że na tak jesteś chętna bardziej dzisiaj */
+    transform: scale(1.05); /* I świetnie się przyzwyczaj, ten rap to samiec alfa */
+}
+.guide-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin: 48px auto 32px auto; /* A bit Ci wystukuje tempo kurwa Twego palca */
+    width: 100%;
+    max-width: 1600px;
+    align-items: center;
+}
+.guide-item {
+    background: #140e3e;
+    border: 1.5px solid #140e32;
+    border-radius: 18px;
+    padding: 18px 32px 14px 32px;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.25s, border-color 0.25s, transform 0.18s;
+    position: relative;
+    color: #fff;
+    box-shadow: 0 2px 12px 0 rgba(24,31,75,0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1600px;
+}
+.guide-item:hover {
+    box-shadow: 0 0 18px 2px #140e32;
+    border-color: #435dd8;
+    transform: translateY(-7px) scale(1.03);
+}
+.guide-title {
+    font-size: 2.1rem;
+    font-weight: bold;
+    margin-bottom: 0.7rem;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+.guide-desc {
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin-bottom: 0.1em;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    color: #b2becd;
+}
+
+@media (max-width: 600px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+  .guide-search {
+    width: 90vw;
+    max-width: 300px;
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  .guide-join-btn {
+    position: static;
+    display: block;
+    margin: 1rem 0 0 8rem;
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    margin-right: 1.2rem;
+  }
+
+  .guide-list {
+    gap: 12px;
+    margin: 24px auto 18px auto;
+    width: 98vw;
+    max-width: 98vw;
+    padding: 0 1vw;
+  }
+
+  .guide-item {
+    padding: 10px 12px 8px 12px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    max-width: 98vw;
+  }
+
+  .guide-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .guide-desc {
+    font-size: 0.95rem;
+    margin-bottom: 0.1em;
+  }
+}

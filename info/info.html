@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeakM.fun - Info</title>
+    <link rel="stylesheet" href="info.css">
+    <link rel="icon" type="image/png" href="../img/logo_white1.png">
+    <meta property="og:title" content="LeakM.fun">
+    <meta property="og:description" content="Lista aktywnych serwerów z pełnym info – lokalizacje miejscówek, antycheat  i więcej. Wybierz, gdzie warto cheatować :>.">
+    <meta property="og:type" content="website">
+    <meta property=”og:image” content=”img/logo_white1.png”>
+</head>
+<body>
+    <header>
+        <a href="../index.html" style="text-decoration: none; color: inherit;">
+            <h1 style="margin-top: 1;">LeakM.fun</h1>
+        </a>
+        <input type="text" id="search-bar" placeholder="Wyszukaj serwer...">
+    </header>
+    <main>
+        <div class="server-list">
+            <!-- Ktoś ma plecy, chuj w twój szacunek -->
+        </div>
+    </main>
+    <script>
+        const servers = [
+           // { id: 'xl3y4e', name: 'V-LIFE', description: 'WL:ON, Brak AntyCheata', icon: 'icons/vlife.png', link: 'servers/vlife/index.html' },
+            { id: '4mgll9', name: 'Divide', description: 'WL:ON, FiveGuard, logi', icon: 'icons/divide.png', link: 'servers/divide/index.html' },
+            { id: '9jpapm', name: 'Rift', description: 'WL:OFF, FiveGuard, logi', icon: 'icons/rift.png', link: 'servers/rift/index.html' },
+            { id: 'dq6xmd', name: 'KatoVibe', description: 'WL:OFF, FiveGuard', icon: 'icons/katovibe.png', link: 'servers/katovibe/index.html' },
+            { id: 'zkyox5', name: 'Haze', description: 'WL:ON, FiveGuard', icon: 'icons/haze.png', link: 'servers/haze/index.html' },
+            { id: 'r9za67', name: 'Grand', description: 'WL:OFF, FiveGuard, AntyTroll, logi', icon: 'icons/grand.png', link: 'servers/grand/index.html' },
+            { id: 'kj4bdr', name: 'Waves', description: 'WL:OFF, ElectronAC, FiveEye', icon: 'icons/waves.png', link: 'servers/waves/index.html' }
+            // { id: '', name: '', description: 'WL:', icon: 'icons/copy.png', link: 'servers/copy/index.html' }
+        ];
+
+        const serverListElement = document.querySelector('.server-list');
+
+        // Wplątujesz się kurwa w kolejny romas, Jongmen nie leciał z głośników a i tak czułem dysonans
+        function fetchPlayerData() {
+            servers.forEach(server => {
+                fetch(`https://servers-frontend.fivem.net/api/servers/single/${server.id}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const playerCount = data.Data.clients;
+                        const maxPlayers = data.Data.sv_maxclients;
+                        const playerCountText = `${playerCount}/${maxPlayers}`;
+
+                        // Dupy, prezencje zmywają z make up'em
+                        const serverElement = serverListElement.querySelector(`[data-server-id="${server.id}"]`);
+                        if (serverElement) {
+                            const playerCountElement = serverElement.querySelector('.player-count');
+                            playerCountElement.textContent = `${playerCountText}`;
+                        }
+                    })
+                    .catch(error => console.error('Błąd pobierania liczby graczy:', error));
+            });
+        }
+
+        // Niejedna se taryfą wróciła za lachę
+        function renderServers() {
+            serverListElement.innerHTML = '';
+
+            const sortedServers = servers.sort((a, b) => a.name.localeCompare(b.name));
+
+            sortedServers.forEach(server => {
+                const serverElement = document.createElement('a');
+                serverElement.className = 'server';
+                serverElement.setAttribute('data-server-id', server.id);
+                serverElement.setAttribute('href', server.link);
+
+                serverElement.innerHTML = `
+                    <img src="${server.icon}" alt="${server.name} Icon" class="server-icon">
+                    <div class="server-details">
+                        <h2 class="server-name">${server.name}</h2>
+                        <p class="server-description">${server.description}</p>
+                        <span class="player-count">Gracze: Ładowanie...</span>
+                    </div>
+                `;
+
+                serverListElement.appendChild(serverElement);
+            });
+
+            // WWA ogólnie zle nikomu nie życzę
+            fetchPlayerData();
+        }
+
+        // Napierdalać rap, który wsiąka w ulicę
+        renderServers();
+
+        document.getElementById('search-bar').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const servers = document.querySelectorAll('.server');
+
+            servers.forEach(server => {
+                const name = server.querySelector('.server-name').textContent.toLowerCase();
+
+                if (name.includes(query)) {
+                    server.style.display = 'flex';
+                } else {
+                    server.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

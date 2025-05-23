@@ -1,0 +1,23 @@
+[
+    { "x": 1118.8347, "y": -634.5932, "iconId": 1, "name": "Hurtownia kwiatów", "type": "narkotyki" },
+    { "x": -143.52, "y": 229.53, "iconId": 1, "name": "Hurtownia Figurek", "type": "narkotyki" },
+    { "x": -1032.44, "y": 686.0, "iconId": 1, "name": "Madrazo (Wymień x5 figurek z kokainą na dostęp do labo mety)", "type": "narkotyki" },
+    { "x": -58.91, "y": -1530.98, "iconId": 1, "name": "Gerald (Wymień 10 paczek marihuany za karte do labo kokainy)", "type": "narkotyki" },
+    { "x": -1055.31, "y": -243.29, "iconId": 1, "name": "Lokacje dilera", "type": "narkotyki" },
+    { "x": 258.2787, "y": -1371.8269, "iconId": 1, "name": "Farmaceuta", "type": "narkotyki" },
+    { "x": -64.0272, "y": -1224.0181, "iconId": 1, "name": "Dealer marihuany", "type": "narkotyki" },
+    { "x": 819.61, "y": -2348.83, "iconId": 1, "name": "Sprzedawca leków", "type": "narkotyki" },
+    { "x": 387.51, "y": 3584.86, "iconId": 1, "name": "Laboratorium Weeda", "type": "narkotyki" },
+    { "x": 2843.45, "y": 1456.99, "iconId": 1, "name": "Laboratorium Mety", "type": "narkotyki" },
+    { "x": -288.22, "y": -1634.63, "iconId": 1, "name": "Zbieranie Heroiny", "type": "narkotyki" },
+    { "x": 1391.41, "y": 3605.55, "iconId": 1, "name": "Przetwarzanie Heroiny", "type": "narkotyki" },
+    { "x": 2431.04, "y": 4971.46, "iconId": 1, "name": "Robienie cracku", "type": "narkotyki" },
+    { "x": 1300.83, "y": 4318.70, "iconId": 1, "name": "Laboratorium koki", "type": "narkotyki" },
+    { "x": 2526.91, "y": 4358.54, "iconId": 1, "name": "Zbieranie koki", "type": "narkotyki" },
+    { "x": -582.9, "y": 5834.17, "iconId": 1, "name": "Zbieranie grzybów", "type": "narkotyki" },
+    { "x": 318.78, "y": 4319.8, "iconId": 1, "name": "Zbieranie Peyote", "type": "narkotyki" },
+    { "x": 625.63, "y": 559.87, "iconId": 1, "name": "Kupowanie rzeczy na broń", "type": "bron" },
+    { "x": -300.44, "y": -1400.6, "iconId": 1, "name": "Tworzenie pistoletu", "type": "bron" },
+    { "x": 1364.98, "y": -2102.51, "iconId": 1, "name": "Tworzenie amunicji", "type": "bron" },
+    { "x": 1108.6917, "y": -2336.5908, "iconId": 1, "name": "DarkShop", "type": "darkshop" }
+]

@@ -1,0 +1,6 @@
+[
+    { "x": 0, "y": 0, "iconId": 1, "name": "ChopShop", "type": "chopshop" },
+    { "x": 100, "y": 500, "iconId": 1, "name": "DarkShop", "type": "darkshop" },
+    { "x": 2000, "y": 3000, "iconId": 1, "name": "Baśka", "type": "baska" },
+    { "x": 1500, "y": 2500, "iconId": 1, "name": "DarkShop 2", "type": "darkshop" }
+]

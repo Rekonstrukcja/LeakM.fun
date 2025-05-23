@@ -1,0 +1,10 @@
+[
+    { "x": -1147.083008, "y": -2002.662109, "iconId": 1, "name": "Crafting", "type": "crafting" },
+    { "x": -345.374969, "y": -130.687088, "iconId": 1, "name": "Crafting", "type": "crafting" },
+    { "x": -1283.74, "y": -1629.65, "iconId": 1, "name": "DarkShop", "type": "darkshop" },
+    { "x": 143.19, "y": -1656.04, "iconId": 1, "name": "Oxy Sklep", "type": "oxy" },
+    { "x": -1209.95, "y": -944.02, "iconId": 1, "name": "Oxy Sprzedaż", "type": "oxy-sprzedaz" },
+    { "x": 475.59, "y": -1676.02, "iconId": 1, "name": "Okradanie domów", "type": "domy" },
+    { "x": -903.15, "y": -1005.80, "iconId": 1, "name": "Okradanie domów", "type": "domy" },
+    { "x": -1185.59, "y": -1234.62, "iconId": 1, "name": "Branie zlecenia", "type": "walizka" }
+]

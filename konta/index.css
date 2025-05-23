@@ -1,0 +1,181 @@
+body {
+    background: linear-gradient(135deg, #181f4b 0%, #351383 100%);
+    font-family: 'Lexend', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    color: #fff;
+}
+header {
+    text-align: center;
+    padding: 2.5rem 0 1.5rem 0;
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color:rgb(255, 255, 255);
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 0 2px 16px #6491C5;
+}
+.accounts-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    padding: 40px 0 60px 0;
+}
+.account-card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 260px;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 4px 32px 0 rgba(0,230,208,0.10);
+    background: rgba(34, 40, 49, 0.92);
+    margin-left: 0;
+    margin-right: auto;
+    width: 70%;
+    animation: fadeInCard 0.8s;
+    transition: box-shadow 0.5s, transform 1s cubic-bezier(.4,2,.6,1);
+}
+.account-card:hover {
+    box-shadow: 0 8px 40px 0 rgba(0,230,208,0.18);
+    transform: scale(1.035);
+}
+.card-left {
+    margin-left: 0;
+    margin-right: auto;
+    flex-direction: row;
+}
+.card-right {
+    margin-right: 0;
+    margin-left: auto;
+    flex-direction: row-reverse;
+}
+.account-card-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.18;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s;
+}
+.account-card:hover .account-card-bg {
+    opacity: 0.28;
+}
+.account-card-logo-bg {
+    position: absolute;
+    left: -60px;
+    top: -60px;
+    width: 270px;
+    height: 270px;
+    opacity: 0.10;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    filter: drop-shadow(0 2px 16px #0008);
+    transition: opacity 0.3s;
+    transform: rotate(45deg);
+}
+.card-right .account-card-logo-bg {
+    left: auto;
+    right: -30px;
+    top: -30px;
+    /* Zakładam kaptur jeszcze bardziej hermetyczny */
+}
+.account-card-content {
+    position: relative;
+    z-index: 2;
+    padding: 38px 44px 32px 44px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.account-card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #00e6d0;
+    margin-bottom: 0.5em;
+    letter-spacing: 1px;
+}
+.account-card-desc {
+    font-size: 1.13rem;
+    color: #e0f7fa;
+    line-height: 1.6;
+    font-weight: 400;
+}
+.account-card-hint {
+    display: block;
+    margin-top: 18px;
+    color: #b2becd;
+    font-size: 0.98rem;
+    font-style: italic;
+    font-weight: 400;
+    opacity: 0.7;
+    text-align: right;
+}
+.join-button {
+  position: absolute;
+  right: 7rem; /* Sram w podziemie które kurwa błyszczy */
+  top: 1.5rem;
+  padding: 0.8rem 1.5rem; /* Jebać kurwa blink blink na kradzionych bitach */
+  background-color: #1e155d;
+  color: #ffffff;
+  border: 2px solid #1e155d;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif; /* Scena giba się jak pierdolony rezus */
+  font-size: 1.2rem; /* Podziemna prorapera nie ameryka */
+  transition: background-color 0.3s, color 0.3s; /* Jeden szczegół weź wypadaj z obiegu */
+}
+.join-button:hover {
+  background-color: transparent;
+}
+@keyframes fadeInCard {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@media (max-width: 900px) {
+    .accounts-container { gap: 32px; }
+    .account-card { width: 95%; }
+    .account-card-content { padding: 24px 14px 20px 14px; }
+}
+@media (max-width: 600px) {
+    .accounts-container { 
+        gap: 16px; 
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+    .account-card {
+        width: 84%;
+        min-height: 150px;
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .account-card-content {
+        padding: 18px 14px 14px 14px; /* zwiększono padding z każdej strony */
+        gap: 10px;
+    }
+    .account-card-title {
+        font-size: 0.95rem;
+    }
+    .account-card-desc {
+        font-size: 0.82rem;
+    }
+    .account-card-hint {
+        font-size: 0.82rem;
+    }
+    .join-button {
+        position: absolute;
+        right: 0.5rem;
+        top: 6rem;
+        font-size: 0.95rem;
+        padding: 0.5rem 1rem;
+        border-radius: 18px;
+    }
+}

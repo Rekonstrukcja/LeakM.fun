@@ -1,0 +1,21 @@
+[
+    { "x": -2299.76, "y": 179.5, "iconId": 1, "name": "Crafting", "type": "crafting" },
+    { "x": -1192.89, "y": -215.39, "iconId": 1, "name": "Tracker", "type": "tracker" },
+    { "x": 371.92, "y": -2120.79, "iconId": 1, "name": "Graficiarz", "type": "graf" },
+    { "x": 1644.50, "y": 4857.98, "iconId": 1, "name": "DarkShop", "type": "darkshop" },
+    { "x": 474.00, "y": -2452.93, "iconId": 1, "name": "Zbieranie", "type": "weed" },
+    { "x": 455.33, "y": -1874.78, "iconId": 1, "name": "Przeróbka", "type": "weed" },
+    { "x": -387.72, "y": 4355.18, "iconId": 1, "name": "Zbieranie", "type": "meth" },
+    { "x": 167.0, "y": 2229.2, "iconId": 1, "name": "Przeróbka", "type": "meth" },
+    { "x": -757.92, "y": -662.48, "iconId": 1, "name": "Strefa 1 sprzedaży narkotyków", "type": "selldrugs" },
+    { "x": 440.55, "y": -1829.9, "iconId": 1, "name": "Strefa 2 sprzedaży narkotyków", "type": "selldrugs" },
+    { "x": 542.81, "y": -496.33, "iconId": 1, "name": "Strefa 3 sprzedaży narkotyków", "type": "selldrugs" },
+    { "x": -1265.45, "y": -2992.11, "iconId": 1, "name": "Strefa 4 sprzedaży narkotyków", "type": "selldrugs" },
+    { "x": 94.22, "y": 3756.12, "iconId": 1, "name": "Baron", "type": "baron" },
+    { "x": 181.06, "y": 2793.52, "iconId": 1, "name": "Baśka 1", "type": "baska" },
+    { "x": -64.36, "y": 6236.31, "iconId": 1, "name": "Baśka 2", "type": "baska" },
+    { "x": 1248.46, "y": -2571.48, "iconId": 1, "name": "Baśka 3", "type": "baska" },
+    { "x": -252.17, "y": 6334.16, "iconId": 1, "name": "Baśka 4", "type": "baska" },
+    { "x": 4955.45, "y": -5321.17, "iconId": 1, "name": "Baśka 5 (cayo perico)", "type": "baska" },
+    { "x": 920.87, "y": -1142.60, "iconId": 1, "name": "Paser", "type": "paser" }
+]

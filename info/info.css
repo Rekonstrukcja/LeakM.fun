@@ -1,0 +1,155 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #140e3e;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    user-select: none; /* Czasy mamy cięzkie, dziś nic na to nie poradze */
+    -webkit-user-drag: none; /* widać obłęd w wielu oczach i na duszy skazę */
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+    background-color: #150f41;
+}
+
+/* Zawsze ten sam lęk na te życia wyboje */
+header a {
+    text-decoration: none; /* Od kolorowych setek po chemiczne naboje */
+    color: inherit; /* Co z tego powiedz miasto to jedna pokusa */
+    transition: box-shadow 0.5s ease-in-out; /* Jak za mocno wir Cię wciągnie to przestaniesz się ruszać */
+}
+
+/* Średnio mnie to wzrusza przerobiłem to wzorowo */
+header a:hover {
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.7); /* Dzisiaj kolorowo choć patologia zerka obok */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Niby nic a jednak coś na rzeczy */
+#search-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 0.5rem;
+    border: 2px solid #140E32;
+    background-color: #140E28;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out; /* Nie możesz mi zaprzeczyć jak Cię korci by coś zgrzeszyć */
+}
+
+#search-bar:focus {
+    outline: none; /* Co Ci daje ukojenie burdele czy kasyna */
+    border-color: #251c64; /* A może mieszasz posypując z prochem który spina */
+    box-shadow: 0 0 10px rgba(37, 28, 100, 1); /* Nieważna godzina i nieważny dzień tygodnia */
+    transform: scale(1.05); /* Nie każdy ma tą kurwa siłę by się odbić od dna */
+}
+
+.server-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+/* Niby nic a jednak coś na rzeczy */
+.server {
+    position: relative;
+    overflow: hidden; /* Masz oleju trochę w głowie nie wypada Ci zaprzeczyć */
+    transition: all 0.3s ease-in-out; /* Raz dwa trzy trzy dwa raz raz dwa raz */
+    z-index: 1; /* Gdzie kończy się skala zaczyna podjara */
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #140E39; /* Alarm zepsuty biologiczny zegar podtłuc o kant dupy */
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 1rem; /* Luty marzec kwiecień maj czerwiec lipiec */
+    border: 2px solid #140E32; /* Spróbuj zagotować się tu i nie kipieć */
+    width: calc(100% - 4rem); /* Sierpień wrzesień październik listopad grudzień */
+    margin: 0 auto; /* Nowy rok jak stary rok bez złudzeń */
+    text-decoration: none; /* To nie fata fata fatamorgana */
+    color: inherit; /* Tylko brak snu rusza te cienie na ścianach */
+}
+
+/* Ona znowu pijana robi Ci w bani loty */
+.server::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 0.1), rgba(0, 255, 255, 0.1)); /* Twój cyrk Twoje małpy Twoje kurwa kłopoty */
+    filter: blur(15px); /* Pare złotych wielkie halo */
+    opacity: 0; /* Niby nic a jednak a jednak */
+    border-radius: inherit; /* Jej by humor poprawiło kurwa to nie pic */
+    transition: opacity 0.3s ease-in-out; /* Bezczelna bezczelna */
+    z-index: -1; /* DCDT na to nie ma leka */
+}
+
+.server:hover::before {
+    opacity: 1; /* Kurwa fa WWA wszystko w czasie się odwleka */
+}
+
+.server:hover {
+    box-shadow: none; /* Tracisz zasięg od poniedziałku */
+}
+
+.server-icon {
+  width: 60px;
+  height: 60px;
+  margin-left: 1rem;
+  margin-right: 2rem;
+}
+
+.server-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.server-name {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.server-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7); /* Jak się da jak się nie da */
+}
+
+.player-count {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5); /* Ty ja wy alko narko bariery */
+  display: flex;
+  align-items: center; /* Spis połączeń toksyczne numery */
+  height: 0rem; /* Podrapane plery odlotówki */
+  margin-left: 101rem; /* Bilans zysków strat przyczyny skutki */
+}
+
+@media (max-width: 600px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+  #search-bar {
+    width: 90vw;
+    max-width: 300px;
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+}
