@@ -1,12 +1,19 @@
 [
-    { "x": -587.597, "y": -1355.793, "iconId": 1, "name": "Zbieranie kokainy, w podziemiach, wejście od kanałów", "type": "kokaina" },
-    { "x": 4585.86, "y": -4874.62, "iconId": 1, "name": "Stół do kokainy (Cayo Perico)", "type": "kokaina" },
     { "x": -3193.93, "y": 1275.53, "iconId": 1, "name": "Dziwny sprzedawca", "type": "darkshop" },
     { "x": 721.279, "y": 1297.015, "iconId": 1, "name": "Klamaziom", "type": "darkshop" },
     { "x": 2633.91, "y": 3309.13, "iconId": 1, "name": "Dodatki do broni", "type": "darkshop" },
     { "x": -589.2, "y": -1321.87, "iconId": 1, "name": "Under (posiada ammo)", "type": "darkshop" },
     { "x": 2489.84, "y": 3440.92, "iconId": 1, "name": "Crafting", "type": "crafting" },
-    { "x": 3287.4, "y": 5185.63, "iconId": 1, "name": "Zone do sadzenia zioła", "type": "weed" },
-    { "x": 3363.22, "y": 5456.61, "iconId": 1, "name": "Zone do sadzenia zioła", "type": "weed" },
-    { "x": 2224.166, "y": 5577.49, "iconId": 1, "name": "Zone do sadzenia zioła", "type": "weed" }
+    { "x": 1532.0454101562, "y":  1728.2634277344, "iconId": 1, "name": "Sklep Ogrodniczy", "type": "weed" },
+    { "x": -174.52523803711, "y": -1734.0944824219, "iconId": 1, "name": "Stóły do pakowania", "type": "weed" },
+    { "x": -291.91943359375, "y": 2527.3308105469, "iconId": 1, "name": "Stóły do pakowania", "type": "weed" },
+    { "x": 1957.3532714844, "y": 5189.5112304688, "iconId": 1, "name": "Stóły do pakowania", "type": "weed" },
+    { "x": 2868.6938476562, "y": 1505.6224365234, "iconId": 1, "name": "Piekarnik do kokainy", "type": "kokaina" },
+    { "x": 2663.2580566406, "y": 886.32592773438, "iconId": 1, "name": "Prasa do przerabiania kokainy", "type": "kokaina" },
+    { "x": 721.2, "y": 1297.01, "iconId": 1, "name": "Tutaj kupujecie nasiono kokainy", "type": "kokaina" },
+    { "x": 3316.9130859375, "y": 5188.474609375, "iconId": 1, "name": "Stół do gotowania (mety)", "type": "meta" },
+    { "x": 2301.2238769531, "y": 4866.5844726562, "iconId": 1, "name": "Piekarnik do metaamfetaminy", "type": "meta" },
+    { "x": 1432.4022216797, "y": 4366.515625, "iconId": 1, "name": "Sklep chemiczny", "type": "drugshop" },
+    { "x": -1698.9619140625, "y": -257.03363037109, "iconId": 1, "name": "Sklep z zaopatrzeniem", "type": "drugshop" },
+    { "x": 1532.0454101562, "y": 1728.2634277344, "iconId": 1, "name": "Sklep Ogrodniczy", "type": "drugshop" }
 ]

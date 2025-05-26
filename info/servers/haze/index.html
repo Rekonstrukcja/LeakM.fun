@@ -18,10 +18,7 @@
             <div class="locations">
                 <h2>Lokalizacje</h2>
                 <form id="lokacje-form" class="radio-input">
-                    <label class="label">
-                        <input type="radio" name="typ" value="kokaina">
-                        <span class="text">Kokaina</span>
-                    </label>
+
                     <label class="label">
                         <input type="radio" name="typ" value="darkshop">
                         <span class="text">DarkShop</span>
@@ -33,6 +30,18 @@
                     <label class="label">
                         <input type="radio" name="typ" value="weed" checked>
                         <span class="text">Weed</span>
+                    </label>
+                    <label class="label">
+                        <input type="radio" name="typ" value="kokaina" checked>
+                        <span class="text">Kokaina</span>
+                    </label>
+                    <label class="label">
+                        <input type="radio" name="typ" value="meta" checked>
+                        <span class="text">Meta</span>
+                    </label>
+                    <label class="label">
+                        <input type="radio" name="typ" value="drugshop" checked>
+                        <span class="text">NarkoShop</span>
                     </label>
                     <label class="label">
                         <input type="radio" name="typ" value="" checked>
@@ -54,7 +63,7 @@
             <div class="antycheat-info">
                 <h2>ANTYCHEAT</h2>
                 <!-- ZMIEN TO -->
-                <div id="antycheat-desc">FiveGuard: haze-opisek.</div>
+                <div id="antycheat-desc">FiveGuard: haze-opisek, Lura.ph (AC): EpicEye.</div>
             </div>
             <a href="../../../send-info" class="dolacz-box send-info-box">
                 <div class="dolacz send-info-btn">
@@ -71,10 +80,13 @@
     <script>
     // ZMIEN TO
     const OPISY = {
-        "kokaina": "Opis dla ChopShop. Tutaj możesz oddać skradzione pojazdy.",
+        "kokaina": "Stół do kokainy (Cayo Perico)",
         "darkshop": "Lista DarkShopów na serwerze, jest ich wiele.",
         "crafting": "Tworzenie przedmiotów",
-        "weed": "Miejsca do sadzenia marihuany",
+        "weed": "Stoły do pakowania marihuany oraz sklepy z nasionami.",
+        "kokaina": "Lista lokalizacji do robienia koki (kliknij na znaczniki aby zobaczyć opis)",
+        "meta": "Lista lokalizacji do robienia mety (kliknij na znaczniki aby zobaczyć opis)",
+        "drugshop": "Lokalizacje sklepów z rzeczy potrzebnych do robienia narkotyków.",
         "": ""
     };
 
