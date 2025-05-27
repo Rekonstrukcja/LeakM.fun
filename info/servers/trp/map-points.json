@@ -1,0 +1,17 @@
+[
+    { "x": 0, "y": 0, "iconId": 1, "name": "ChopShop", "type": "truck" },
+    { "x": 1274.7621, "y": -1721.0372, "iconId": 1, "name": "Zaczęcie zlecenia", "type": "truckrob" },
+    { "x": 596.51, "y": -427.65, "iconId": 1, "name": "Sklep z c4", "type": "truckrob" },
+    { "x": -2297.13, "y": 291.28, "iconId": 1, "name": "Paser, tam sprzedacie rzeczy z napadu", "type": "truckrob" },
+    { "x": -1192.91, "y": -215.56, "iconId": 1, "name": "Branie zlecenia", "type": "tracker" },
+    { "x": 706.76, "y": -304.64, "iconId": 1, "name": "Sklepix", "type": "darkshop" },
+    { "x": 3406.77, "y": 5504.87, "iconId": 1, "name": "Pole", "type": "weed" },
+    { "x": -475.20, "y": 6287.53, "iconId": 1, "name": "", "type": "baska" },
+    { "x": 2786.32, "y": 1397.27, "iconId": 1, "name": "sprzedaz", "type": "zlote" },
+    { "x": 812.69, "y": -493.62, "iconId": 1, "name": "Fentantyl", "type": "crafting" },
+    { "x": 1665.60, "y": -49.82, "iconId": 1, "name": "Kokaina", "type": "crafting" },
+    { "x": 1392.36, "y": -2089.77, "iconId": 1, "name": "Pistolety", "type": "crafting" },
+    { "x": 119.76, "y": -1954.60, "iconId": 1, "name": "amunicja (TYLKO ORGANIZACJA BALLAS)", "type": "crafting" },
+    { "x": 714.11, "y": -967.66, "iconId": 1, "name": "kamizelki (TYLKO ORGANIZACJA FAMILY)", "type": "crafting" },
+    { "x": 427.57, "y": -1972.72, "iconId": 1, "name": "Meta", "type": "crafting" }
+]
