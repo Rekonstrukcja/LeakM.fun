@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ZMIEN TO -->
+    <title>FillRP</title>
+    <link rel="stylesheet" href="../server.css">
+    <link rel="icon" type="image/png" href="../../../img/logo_white1.png">
+    <meta property="og:title" content="LeakM.fun">
+    <meta property="og:description" content="Lista lokalizacji na .">
+    <meta property="og:type" content="website">
+    <meta property=”og:image” content=”../../../img/logo_white1.png”>
+</head>
+<body>
+    <main>
+        <div class="layout">
+            <div class="locations">
+                <h2>Lokalizacje</h2>
+                <form id="lokacje-form" class="radio-input">
+                    <label class="label">
+                        <input type="radio" name="typ" value="narko">
+                        <span class="text">Sadzenie</span>
+                    </label>
+                    <label class="label">
+                        <input type="radio" name="typ" value="pralnia">
+                        <span class="text">Pralnia</span>
+                    </label>
+                    <label class="label">
+                        <input type="radio" name="typ" value="tracker">
+                        <span class="text">Tracker</span>
+                    </label>
+                    <label class="label">
+                        <input type="radio" name="typ" value="mafiacrafting">
+                        <span class="text">Crafting (mafia)</span>
+                    </label>
+                    <label class="label">
+                        <input type="radio" name="typ" value="darkshop">
+                        <span class="text">Darkshop'y</span>
+                    </label>
+                    <label class="label">
+                        <input type="radio" name="typ" value="" checked>
+                        <span class="text">Brak</span>
+                    </label>
+                </form>
+            </div>
+            <div class="map">
+                <h2></h2> <!-- ZMIEN TO -->
+                <iframe 
+                    src="../../../gtamap/index.html?points=info/servers/fill/map-points.json"
+                    title="GTA V Map, to się musi zle skończyć">
+                </iframe>
+            </div>
+            <div class="info">
+                <h2>Opis</h2>
+                <div id="lokacja-info"></div>
+            </div>
+            <div class="antycheat-info">
+                <h2>ANTYCHEAT</h2>
+                <!-- ZMIEN TO -->
+                <div id="antycheat-desc">FiveGuard: jakjacierucham. Logs: fill-logs</div>
+            </div>
+            <a href="../../../send-info" class="dolacz-box send-info-box">
+                <div class="dolacz send-info-btn">
+                    <h2>WYŚLIJ INFO</h2>
+                </div>
+            </a>
+            <a href="https://discord.gg/tA5PRJ7Apb" target="_blank" class="dolacz-box">
+                <div class="dolacz">
+                    <h2>DOŁĄCZ DO NAS</h2>
+                </div>
+            </a>
+        </div>
+    </main>
+    <script>
+    // ZMIEN TO
+    const OPISY = {
+        "narko": "Pola do sadzenia narkotyków.",
+        "pralnia": "Pranie brudnych pieniędzy.",
+        "tracker": "Zlecenia na okradanie aut",
+        "mafiacrafting": "Crafting TYLKO dla mafii.",
+        "darkshop": "Lista darkshopów.",
+        "": ""
+    };
+
+    function showLocationInfo(type) {
+        const infoDiv = document.getElementById('lokacja-info');
+        infoDiv.innerHTML = OPISY[type] || "";
+    }
+
+    function updateWaypointsFilter() {
+        const form = document.getElementById('lokacje-form');
+        const selected = form.elements['typ'].value;
+        const iframe = document.querySelector('.map iframe');
+        // DEBUG: Jakie miasto, taka bajka
+        console.log('wysyłam filter:', selected);
+        if (iframe && iframe.contentWindow) {
+            iframe.contentWindow.postMessage({ filter: selected ? [selected] : [] }, '*');
+        }
+        showLocationInfo(selected);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('lokacje-form');
+        Array.from(form.elements['typ']).forEach(rb => {
+            rb.addEventListener('change', updateWaypointsFilter);
+        });
+        updateWaypointsFilter(); // <-- od D do D do L
+    });
+
+    // Od W do W do A
+    document.addEventListener('contextmenu', event => event.preventDefault()); // Się wychyla łajza? Jeb cep na łeb
+    document.addEventListener('selectstart', event => event.preventDefault()); // Nokaut is dead, zszedł i comeback
+    document.addEventListener('dragstart', event => event.preventDefault()); // Pech, bo ich trzech, odwet robią jego ziomki
+                                                                            // Na szczękowej chirurgii lekarz w całości łączy
+    </script>
+</body>
+</html>

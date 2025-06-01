@@ -1,0 +1,14 @@
+[
+    { "x": 257.8909, "y": 7432.5796, "iconId": 1, "name": "Pole kokainy", "type": "narko" },
+    { "x": 2098.8064, "y": 4848.4883, "iconId": 1, "name": "Pole weed", "type": "narko" },
+    { "x": -88.8781, "y": 3075.5657, "iconId": 1, "name": "Pole Wild Cannabis", "type": "narko" },
+    { "x": -1124.224609375, "y": 4892.400390625, "iconId": 1, "name": "Pralnia", "type": "pralnia" },
+    { "x": -659.8860, "y": -2448.9817   , "iconId": 1, "name": "ChopShop", "type": "tracker" },
+    { "x": -1551.6154785156, "y": 77.887512207031, "iconId": 1, "name": "Crafting", "type": "mafiacrafting" },
+    { "x": -2185.0686, "y": 209.5741, "iconId": 1, "name": "DarkShop", "type": "darkshop" },
+    { "x": 2261.0552, "y": 4577.8145, "iconId": 1, "name": "DarkShop Kamizelka", "type": "darkshop" },
+    { "x": -1550.1253662109, "y": 76.458023071289, "iconId": 1, "name": "Mirek (kupno magazynków) (tylko mafia moze)", "type": "darkshop" },
+    { "x": 988.4338, "y": -1665.4364, "iconId": 1, "name": "Złomiarz ( fake tablice", "type": "darkshop" },
+    { "x": -466.1190, "y": 6288.1953, "iconId": 1, "name": "WeedShop (wildcannabis nasiono)", "type": "darkshop" },
+    { "x": 89.0080, "y": 4571.1201, "iconId": 1, "name": "CocaShop (nasionko kokainy)", "type": "darkshop" }
+]
