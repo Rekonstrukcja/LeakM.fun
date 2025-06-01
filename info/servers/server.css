@@ -55,8 +55,26 @@ h1 {
     overflow: hidden;
     margin-top: -45px;
     border: 2px solid #140e39;
+    position: relative;
 }
 
+
+.map::after {
+  content: "LeakM.fun";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  color: #fff;
+  opacity: 0.5;
+  pointer-events: none;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  user-select: none;
+  z-index: 2;
+}
 
 .map iframe {
     width: 100%;
