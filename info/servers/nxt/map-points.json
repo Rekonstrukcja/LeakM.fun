@@ -1,0 +1,9 @@
+[
+    { "x": 342.9417, "y": -1683.609, "iconId": 1, "name": "WeedShop (na schodach na parkingu)", "type": "darkshop" },
+    { "x": -56.66611, "y": 603.4353, "iconId": 1, "name": "Czarny Lombard", "type": "darkshop" },
+    { "x": -1804.773, "y": 437.0195, "iconId": 1, "name": "MafiaShop (tylko mafia moze korzystac)", "type": "darkshop" },
+    { "x": 1868.985, "y": 3337.808, "iconId": 1, "name": "kokainaShop (zamkniety)", "type": "darkshop" },
+    { "x": 1494.6478271484, "y": -1886.111328125, "iconId": 1, "name": "Adapter", "type": "darkshop" },
+    { "x": -740.8841, "y": 5584.261, "iconId": 1, "name": "crime_nine_laptop_seller", "type": "darkshop" },
+    { "x": 1025.094, "y": 86.81293, "iconId": 1, "name": "crime_nine_gloves_seller", "type": "darkshop" }
+]
